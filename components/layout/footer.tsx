@@ -25,9 +25,9 @@ export function Footer() {
               funcionais, memoráveis e preparados para operar.
             </p>
           </div>
-          <nav aria-label="Rodapé" className="grid gap-3 text-sm text-white/75">
+          <nav aria-label="Rodapé" className="grid gap-1 text-sm text-white/75">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="transition hover:text-white">
+              <Link key={item.href} href={item.href} className="flex min-h-10 items-center transition hover:text-white">
                 {item.label}
               </Link>
             ))}
@@ -39,7 +39,7 @@ export function Footer() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="group flex items-center gap-4 text-sm text-white/75 transition hover:text-white"
+                  className="group flex min-h-12 items-center gap-4 text-sm text-white/75 transition hover:text-white"
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel={item.href.startsWith("http") ? "noreferrer" : undefined}
                 >
@@ -63,7 +63,7 @@ export function Footer() {
             href="https://site-koru-company.vercel.app"
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex w-fit items-center gap-3 text-white/60 transition hover:text-white"
+            className="group inline-flex min-h-10 w-fit items-center gap-3 text-white/60 transition hover:text-white"
             aria-label="Site desenvolvido pela Koru Company"
           >
             <span>Desenvolvido por</span>

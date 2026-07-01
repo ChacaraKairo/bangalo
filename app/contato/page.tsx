@@ -22,11 +22,11 @@ export default function ContatoPage() {
               text="O formulário solicita apenas o essencial e prepara a conversa pelo WhatsApp, principal canal comercial previsto nas regras do projeto."
             />
             <div className="mt-10 grid gap-4 text-sm text-[var(--muted)]">
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="flex min-h-10 items-center gap-3">
                 <MessageCircle aria-hidden="true" size={18} />
                 Falar pelo WhatsApp
               </a>
-              <a href="mailto:contato@bangalodesign.com.br" className="flex items-center gap-3">
+              <a href="mailto:contato@bangalodesign.com.br" className="flex min-h-10 items-center gap-3">
                 <Mail aria-hidden="true" size={18} />
                 contato@bangalodesign.com.br
               </a>

@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 
@@ -49,6 +51,50 @@ function KioskModel() {
 }
 
 export function ShowroomViewer() {
+  const [webglAvailable, setWebglAvailable] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      const canvas = document.createElement("canvas");
+      const context =
+        canvas.getContext("webgl2") ||
+        canvas.getContext("webgl") ||
+        canvas.getContext("experimental-webgl");
+
+      setWebglAvailable(Boolean(context));
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+
+  if (webglAvailable === false) {
+    return (
+      <div className="relative h-[440px] overflow-hidden bg-[#e8e0d3] md:h-[560px]">
+        <Image
+          src="/projects/quiosque-interno-38.webp"
+          alt="Quiosque comercial em destaque"
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+        <div className="absolute bottom-5 left-5 right-5 text-white">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/65">
+            Visualização 3D
+          </p>
+          <p className="mt-2 max-w-md text-sm leading-6 text-white/82">
+            Seu navegador não disponibilizou WebGL nesta sessão. A imagem do projeto permanece como
+            referência visual.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (webglAvailable === null) {
+    return <div className="h-[440px] bg-[var(--stone)] md:h-[560px]" aria-label="Carregando visualizador 3D" />;
+  }
+
   return (
     <div className="relative h-[440px] overflow-hidden bg-[#e8e0d3] md:h-[560px]">
       <Canvas camera={{ position: [3.6, 2.4, 4.2], fov: 38 }} shadows dpr={[1, 1.8]}>
