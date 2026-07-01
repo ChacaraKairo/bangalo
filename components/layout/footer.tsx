@@ -10,7 +10,7 @@ const contactItems = [
   { icon: Phone, label: "WhatsApp", value: "Solicitar orçamento", href: whatsappUrl },
   { icon: Mail, label: "Email", value: "contato@bangalodesign.com.br", href: "mailto:contato@bangalodesign.com.br" },
   { icon: MapPin, label: "Atuação", value: "Projetos comerciais sob medida", href: "/contato" },
-  { icon: Camera, label: "Instagram", value: "Bangalô Design", href: "https://www.instagram.com/" }
+  { icon: Camera, label: "Instagram", value: "@bangalo.design", href: "https://www.instagram.com/bangalo.design/" }
 ];
 
 export function Footer() {
