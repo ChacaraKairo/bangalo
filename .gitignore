@@ -1,0 +1,14 @@
+.next/
+node_modules/
+out/
+dist/
+build/
+
+.env
+.env.local
+.env.*.local
+
+*.log
+tsconfig.tsbuildinfo
+
+referencia-site-atual/
