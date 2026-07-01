@@ -42,3 +42,7 @@ Para adicionar novas fotos, cadastrar projetos e substituir o visualizador 3D po
 ```txt
 docs/HANDOFF.md
 ```
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE`.
