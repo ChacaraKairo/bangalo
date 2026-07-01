@@ -34,3 +34,11 @@ Configurações recomendadas:
 - Node.js Version: `22.x`
 
 O arquivo `.vercelignore` evita enviar arquivos locais, cache de build e a pasta de referência do site antigo.
+
+## Handoff para manutenção
+
+Para adicionar novas fotos, cadastrar projetos e substituir o visualizador 3D por um modelo `.glb`, consulte:
+
+```txt
+docs/HANDOFF.md
+```
