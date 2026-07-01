@@ -7,6 +7,8 @@ Site institucional premium para a Bangalô Design, desenvolvido com Next.js, Rea
 ```bash
 npm install
 npm run dev
+npm run typecheck
+npm run lint
 npm run build
 ```
 
@@ -21,4 +23,14 @@ npm run build
 
 ## Deploy
 
-Projeto preparado para deploy em plataformas compatíveis com Next.js, como Vercel.
+Projeto preparado para deploy na Vercel.
+
+Configurações recomendadas:
+
+- Framework Preset: `Next.js`
+- Install Command: `npm install`
+- Build Command: `npm run build`
+- Output Directory: deixe em branco
+- Node.js Version: `22.x`
+
+O arquivo `.vercelignore` evita enviar arquivos locais, cache de build e a pasta de referência do site antigo.
